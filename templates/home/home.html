@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+
+<!-- <h5><a href="/adminLogin" class="font-weight-bold badge badge-warning"> Admin </a> <br>  </h5> -->
+
+
+<!-- <b>Owner</b> <br>
+<a href="/registration1 " >registration Page</a><br>
+<a href="/login1 " >login Page</a><br>
+
+<br>
+<p>_______</p><br>
+
+<b>Renter</b> <br>
+<a href="/renter_registration " >registration Page</a><br>
+<a href="/renter_login" >login Page</a><br> -->
+
+{% block body %} 
+<div class="float-right container text-center align-middle mb-5" style="  margin: 50px 0 0 500px; ">
+<div class="row ">
+
+<div class="card  bg-info text-dark " style="width: 18rem;">
+    <div class="card-body">
+      <h3 class="card-title font-weight-bold ">Owner</h3>
+      <p class="card-text font font-weight-bold" >New owner, click below to create account..</p>
+      <a href="/registration1  " class="card-link text-white font-weight-normal">Registration</a>        <br>
+      <br>
+      <p class="card-text font-weight-bold">Already user, login below..</p>
+      <a href="/login1 " class="card-link text-white font-weight-normal"   >   Login   </a>
+    </div>
+  </div>
+
+  <div class="card  ml-4 bg-info text-dark" style="width: 18rem; ">
+    <div class="card-body">
+      <h3 class="card-title font-weight-bold">Renter</h3>
+      <p class="card-text font-weight-bold">New renter, click below to create account..</p>
+      <a href="/renter_registration" class="card-link text-white font-weight-normal">Registration </a>    <br>
+      <br>
+      <p class="card-text font-weight-bold">Already user, login below..</p>
+      <a href="/renter_login " class="card-link text-white font-weight-normal"   >   Login   </a>
+    </div>
+  </div>
+  <h5 class="float-right ml-5 mt-5">Just sit back relax and browse houses from <br>your comfort place without
+    physical going <br>to serach for houses, we'll do the work for you<br> and
+    provide you with premium quality houses. <br>  ~ Easy Homes</h5>
+
+
+</div> 
+</div>  
+
+
+{% endblock %}

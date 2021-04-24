@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block head %}
+ <title>Title</title>
+ {% endblock %}
+
+{% block body %} 
+{{ uemail }}<br>
+{{ upass }}<br>
+<br>
+<b></b> 
+<a href="/login1 " >Update</a><br>
+<a href="/login1 " >Logout</a><br>
+
+<br>
+
+
+<h3>Add house  House</h3><br>
+
+<form action='/add_house' method= 'POST'>
+    
+    {{form.hidden_tag()}}
+    {{form.bhk.label}}
+    {{form.bhk}}<br>    
+
+    {{form.address.label}}
+    {{form.address}}<br>    
+
+    {{form.pincode.label}}
+    {{form.pincode}}<br>    
+
+    {{form.city.label}}
+    {{form.city}}<br>
+    {{form.submit}}
+
+</form>
+<form action='/registration1' method= 'POST'>
+    {{form.hidden_tag()}}
+    {{form.username.label}}
+    {{form.username}}<br>
+    {{form.password.label}}
+    {{form.password}}<br>
+    {{form.confirm_pass.label}}
+    {{form.confirm_pass}}<br>
+    {{form.email.label}}
+    {{form.email}}<br>
+
+    {{form.submit}}
+
+</form>
+
+{{error}}<br>
+
+<a href="/login1 " >Review rented House</a><br>
+
+
+
+
+ {% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+ <title>Update</title>
+ {% endblock %}
+
+ {% block body %} 
+
+
+
+<div class="list-group w-25" style= "margin: 130px 0 0 470px;">
+    <a href="#" class="list-group-item list-group-item-action active">
+        Renter profile Info. page    </a>
+    <a href="#" class="list-group-item list-group-item-action disabled"> ID: {{ id}} </a>
+    <a href="#" class="list-group-item list-group-item-action disabled">Name:  {{ na}} </a>
+    <a href="#" class="list-group-item list-group-item-action disabled">Gender:   {{ ge}}</a>
+    <a href="#" class="list-group-item list-group-item-action disabled">Phone number:  {{ pho}}</a>
+    <a href="#" class="list-group-item list-group-item-action disabled">Password: {{ pas}}</a>
+    <a href="#" class="list-group-item list-group-item-action disabled">Email: {{ em}}</a>
+   
+    <a href="{{ url_for('find_homes') }}" class="list-group-item-info list-group-item list-group-item-action text-center">Homepage</a>
+
+  </div>
+
+
+ {% endblock %}

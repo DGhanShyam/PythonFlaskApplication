@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %}
+ <title>Title</title>
+ {% endblock %}
+
+{% block body %} 
+
+<div class="card bg-warning text-dark text-left align-middle bg-warning" style="width: 20rem; height: 2prem; margin: 48px 0 0 470px; ">
+    <div class="card-body">
+      <h5 class="card-title text-center">Renter Registration</h5>
+            
+
+        <form action='/renter_registration' method= 'POST'>
+            {{form.hidden_tag()}}
+            {{form.username.label}}<br>
+            {{form.username}}<br>
+            {{form.password.label}}<br>
+            {{form.password}}<br>
+            {{form.confirm_pass.label}}<br>
+            {{form.confirm_pass}}<br>
+            {{form.email.label}}<br>
+            {{form.email}}<br>            
+            {{form.phone_no.label}}<br>
+            {{form.phone_no}}<br>
+            <br>
+            {{form.submit}}
+
+        </form>
+</div>
+{{data}}
+{{error}}<br>
+<a href="{{ url_for('Home') }}">Homepage</a>
+
+</div>
+
+
+
+ {% endblock %}

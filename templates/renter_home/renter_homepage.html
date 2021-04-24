@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+ <title>Renter_Homepage</title>
+
+
+ {% endblock %}
+
+{% block body %} 
+
+
+<br>
+
+<h5><a href="/update_profile_1 " class="font-weight-bold badge badge-warning">Profile info.</a> <br>  </h5>
+<h5> <a href=" /renter_login " class="font-weight-bold badge badge-danger mb-5">Logout<a><br>  </h5>
+
+
+
+<div class="row ml-5">
+
+<div class="col-sm-4">
+<div class="card bg-primary text-dark text-left align-middle">
+
+
+  <div class="card-body">
+    <h5 class="card-title text-center">Search by pincode</h5>
+        
+
+  <form action='/find_house' method= 'POST'>
+    {{form.hidden_tag()}}
+
+    {{form.pincode.label}}<br>
+    {{form.pincode}}<br> <br>
+    {{form.submit1}}
+    <br>
+    <br>
+
+    {{error}}
+    </form> 
+
+
+
+</div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div class="card bg-secondary text-dark text-left align-middle w-53">
+  <div class="card-body">
+  <h5 class="card-title text-center">Search by city</h5>
+      
+
+  <form action='/find_house' method= 'POST'>
+    {{form.hidden_tag()}}
+
+
+    {{form.city.label}}<br>
+    {{form.city}}<br> <br>
+    {{form.submit1}}<br>
+    <br>
+    {{error}}
+    </form> 
+
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+
+
+ {% endblock %}

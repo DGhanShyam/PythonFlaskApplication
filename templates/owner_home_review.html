@@ -1,0 +1,42 @@
+
+{% block head %}
+ <title>Review Houses</title>
+ {% endblock %}
+
+
+ 
+{% block body %} 
+<a href="{{ url_for('add_homes') }}" class="list-group-item-info list-group-item list-group-item-action text-center">Homepage</a>
+
+    <table border=1  rules=column >
+        <tr>
+            <th>HOUSE ID</th>
+            <th>ADDRESS</th>
+            <th>PINCODE</th>
+            <th>CITY</th>
+            <th>STATE</th>
+            <th>BHK</th>
+        </tr>
+        <br>
+        <br>
+        {% for row in result %}
+
+             {% if row[0] != '' %}
+
+            <tr align="center">
+                <td> {{row[0]}} </td>
+                <td> {{row[1]}} </td>
+                <td> {{row[2]}} </td>
+                <td> {{row[7]}} </td>
+                <td> {{row[6]}} </td>
+                <td> {{row[3]}} </td>
+    
+            </tr>
+
+            {% endif %}
+
+
+        {% endfor %}
+    </table>
+
+    {% endblock %}

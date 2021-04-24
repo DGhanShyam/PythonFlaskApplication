@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+ <title>Owner_Homepage</title>
+
+
+ {% endblock %}
+
+{% block body %} 
+
+
+<br>
+
+<div class="card bg-primary text-dark text-left align-middle " style="width: 20rem; height: 32rem; margin: 10px 0 0 470px; ">
+  <div class="card-body">
+    <h5 class="card-title text-center">Add House</h5>
+        
+
+  <form action='/add_house' method= 'POST'>
+    {{form.hidden_tag()}}
+    {{form.state.label}}<br>
+    {{form.state}}<br>
+    {{form.address.label}}<br>
+    {{form.address}}<br>
+    {{form.pincode.label}}<br>
+    {{form.pincode}}<br>
+    {{form.city.label}}<br>
+    {{form.city}}<br>
+    {{form.bhk.label}}<br>
+    {{form.bhk}}<br>
+    <br>
+    {{form.submit1}}
+
+    </form> 
+<a href="/update_profile  " class="font-weight-bold badge badge-warning">Profile info.</a> <br>
+<a href="/review_house " class="font-weight-bold badge badge-warning">Review rented House</a><br>
+<a href=" /login1 " class="font-weight-bold badge badge-danger">Logout</a><br>
+{{error}}<br>
+
+</div>
+
+</div>
+<br>
+
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+<!--  add javascript socket file after sucessfull login   -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>    
+<script type="text/javascript">
+      var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        socket.on( 'connect', function() {
+            socket.emit( 'my event', {
+                data: 'User Connected',
+                room: 'lounge'
+        });
+      
+      socket.on( 'my response', function( msg ) {
+      console.log( msg );
+      });
+});
+</script> -->
+
+
+
+ {% endblock %}

@@ -1,0 +1,42 @@
+
+
+{% block head %}
+<title>View Houses</title>
+{% endblock %}
+
+
+
+{% block body %} 
+<a href="{{ url_for('find_homes') }}" class="list-group-item-info list-group-item list-group-item-action text-center">Homepage</a>
+
+   <table border=1  rules=column >
+       <tr>
+           <th>HOUSE ID</th>
+           <th>ADDRESS</th>
+           <th>PINCODE</th>
+           <th>CITY</th>
+           <th>STATE</th>
+           <th>BHK</th>
+       </tr>
+       <br>
+       <br>
+       {% for rows in results %}
+
+            {% if rows[0] != '' %}
+
+                <tr align="center">
+                    <td>   <a href="/renter_user_profile/{{rows[0]}}"> {{rows[0]}}</a>  </td>
+                    <td> {{rows[1]}} </td>
+                    <td> {{rows[2]}} </td>
+                    <td> {{rows[7]}} </td>
+                    <td> {{rows[6]}} </td>
+                    <td> {{rows[3]}} </td>
+    
+                </tr>
+
+             {% endif %}
+
+
+       {% endfor %}
+   </table>
+   {% endblock %}

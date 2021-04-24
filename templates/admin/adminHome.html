@@ -1,0 +1,37 @@
+
+{% block body %} 
+
+<h5><a href="/RenterTable" class="font-weight-bold badge badge-warning"> House Renter's Tables  </a>   </h5>
+<h5><a href="/OwnerTable" class="font-weight-bold badge badge-warning"> House Owner's Tables  </a>   </h5>
+<h5><a href="/HomeTable" class="font-weight-bold badge badge-warning"> Houses Tables  </a>  </h5>
+<h5><a href="/ReportedTable" class="font-weight-bold badge badge-warning"> Reported Members Tables  </a>  </h5>
+
+
+
+<table border=1  rules=column >
+    {% for rows in results %}
+
+         {% if rows[0] != '' %}
+
+             <tr align="center">
+                 <td> {{rows[0]}} </td>
+                 <td> {{rows[1]}} </td>
+                 <td> {{rows[2]}} </td>
+                 <td> {{rows[3]}} </td>
+                 <td> {{rows[4]}} </td>
+                 <td> {{rows[5]}} </td>
+                 <td> {{rows[6]}} </td>
+                 <td> {{rows[7]}} </td>
+                 <td> {{rows[8]}} </td>
+                 <td> {{rows[9]}} </td>
+
+                 <td>    <a href=" /delete/{{rows[2]}} "> Delete_Account</a> <br> </td>                 
+             </tr>
+
+          {% endif %}
+    {% endfor %}
+</table>
+
+
+
+ {% endblock %}
